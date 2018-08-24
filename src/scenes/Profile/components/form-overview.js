@@ -6,7 +6,7 @@ const FormOverView = props => (
     <ScrollView style={styles.formWrapper}>
 
         <Button
-            title="My Contacts"
+            title="Mis Contactos"
             onPress = {()=>{ props.navigation.navigate('ContactsScreen',{ name: 'Thor'}) }}//No se utiliza this.props ya que es una función
         />
 

@@ -56,14 +56,8 @@ class Perfil extends Component {
     }
 
     static navigationOptions = {
-        title: 'View Profile',
-        headerStyle: {
-            backgroundColor: '#33D1FF',
-            borderBottomColor: '#33D1FF',
-        },
-        headerTintColor:'#FFF',
+        title: 'Ver Perfil',
         headerTitleStyle: {
-            fontWeight: '500',
             fontSize: 26
         }
     }
