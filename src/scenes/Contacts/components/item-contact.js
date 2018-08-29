@@ -1,19 +1,24 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableHighlight } from 'react-native';
 
 const ItemContact = (props) => (
-    <View style={styles.container}>
-        <View>
-            <Image 
-                style={styles.image}
-                source={{ uri: props.contact.photo}}
-            />           
+    <TouchableHighlight 
+        onPress={( )=> props.navigation.navigate('ProfileScreen')}
+        underlayColor="#ccc"  
+    >
+        <View style={styles.container}>
+            <View>
+                <Image 
+                    style={styles.image}
+                    source={{ uri: props.contact.photo}}
+                />           
+            </View>
+            <View style={styles.content}>
+                <Text style={styles.contactName}>{props.contact.name}</Text>
+                <Text>{props.contact.phone}</Text>
+            </View>
         </View>
-        <View style={styles.content}>
-            <Text style={styles.contactName}>{props.contact.name}</Text>
-            <Text>{props.contact.phone}</Text>
-        </View>
-    </View>
+    </TouchableHighlight>
 );
 const styles = StyleSheet.create({
     container: {

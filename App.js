@@ -9,6 +9,8 @@ import { StackNavigator, NavigationActions } from 'react-navigation';
 
 import Profile from './src/scenes/Profile';
 import Contacts from './src/scenes/Contacts';
+import Diary from './src/scenes/Diary';
+
 
 const AppNavigator = StackNavigator(
   {
@@ -17,10 +19,16 @@ const AppNavigator = StackNavigator(
     },
     ContactsScreen: {
       screen: Contacts
+    },
+    DiaryScreen: {
+      screen: Diary,
+      navigationOptions:()=>({
+        title: "Diary"
+      })
     }
   },
   {
-    initialRouteName: 'ContactsScreen',
+    initialRouteName: 'DiaryScreen',
     navigationOptions: {
       headerStyle: {
         backgroundColor: '#33D1FF',

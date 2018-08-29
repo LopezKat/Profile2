@@ -44,7 +44,7 @@ class Contacts extends Component {
         title: 'Contactos',
     }
     
-    renderItem=({item}) => <ItemContact contact={item} />
+    renderItem=({item}) => <ItemContact navigation={this.props.navigation} contact={item} />
     separatorComponent=()=> <ItemSeparator />
     emptyComponent=()=> <Text>No hay contactos</Text> 
     keyExtractor=item => item.id.toString()
